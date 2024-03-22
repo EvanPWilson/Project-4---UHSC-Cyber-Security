@@ -18,7 +18,7 @@ target_file="${target_directory}/userhistory_${username}_${current_time}.txt"
 
 # Check if the history file exists then append its content to the target file
 if [ -f "$history_file_path" ]; then
-        cat "$history_file_path" >> "$target_file"
+        tac "$history_file_path" >> "$target_file"
         echo "Command history appended to $target_file"
 else
         echo "History file does not exist or cannot be accessed."
