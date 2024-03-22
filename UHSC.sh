@@ -6,6 +6,7 @@ target_directory="/home/sysadmin/Downloads/UserHistoryCollection"
 # Create the directory if it doesn't exist
 mkdir -p "$target_directory"
 
+# Command takes input for what username to use, syntax is "sudo ./UHSC.sh username"
 username=$1
 
 # Define the path to the user's command history file
