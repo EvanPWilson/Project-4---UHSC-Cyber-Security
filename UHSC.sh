@@ -16,9 +16,9 @@ history_file_path="/home/$username/.bash_history"
 current_time=$(date "+%Y-%m-%d_%H-%M-%S")
 target_file="${target_directory}/userhistory_${username}_${current_time}.txt"
 
-# Check if the history file exists then reverse add its content to the target file
+# Check if the history file exists then create the file at $target_file
 if [ -f "$history_file_path" ]; then
-        tac "$history_file_path" >> "$target_file"
+        cat "$history_file_path" >> "$target_file"
         echo "Command history appended to $target_file"
 else
         echo "History file does not exist or cannot be accessed."
